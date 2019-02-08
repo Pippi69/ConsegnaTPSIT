@@ -1,3 +1,4 @@
+//dichiarazione librerie usate 
 #include "pch.h"
 #include <Windows.h>
 #include <stdio.h>
@@ -6,6 +7,7 @@
 
 #pragma warning ( disable: 4996 )
 
+//creazione struct SHARED
 struct SHARED
 {
 	unsigned char buffer[BLOCK_SIZE]; 
