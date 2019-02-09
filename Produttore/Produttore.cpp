@@ -9,7 +9,7 @@
 
 struct SHARED
 {
-	unsigned char buffer[BLOCK_SIZE];
+	unsigned char buffer[BLOCK_SIZE];			//*commento fatto da Ghiotto Giovanni
 	unsigned int count;
 	int end;
 };
