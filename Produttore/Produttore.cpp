@@ -7,9 +7,11 @@
 #pragma warning ( disable : 4996 )
 #pragma warning ( suppress: 4267 )
 
+//definizione stuct Shared
+
 struct SHARED
 {
-	unsigned char buffer[BLOCK_SIZE];			//*commento fatto da Ghiotto Giovanni
+	unsigned char buffer[BLOCK_SIZE];
 	unsigned int count;
 	int end;
 };
@@ -17,7 +19,7 @@ struct SHARED
 STARTUPINFO startup_window;
 PROCESS_INFORMATION child_process;
 
-int main(int argc, char* argv[])
+int main(int argc, char* argv[]) //argomenti utili al lancio dell'eseguibile
 {
 	struct SHARED *shared_data;
 	HANDLE shared_map, empty_semaphore, full_semaphore;
