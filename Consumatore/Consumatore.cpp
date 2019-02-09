@@ -8,9 +8,9 @@
 #pragma warning ( disable: 4996 )
 
 //creazione struct SHARED
-struct SHARED
+struct SHARED					//* dichiarazione dello struct SHARED
 {
-	unsigned char buffer[BLOCK_SIZE]; 
+	unsigned char buffer[BLOCK_SIZE];
 	unsigned int count;
 	int end;
 };
