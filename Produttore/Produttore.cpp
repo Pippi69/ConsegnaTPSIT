@@ -7,11 +7,9 @@
 #pragma warning ( disable : 4996 )
 #pragma warning ( suppress: 4267 )
 
-//definizione stuct Shared
-
 struct SHARED
 {
-	unsigned char buffer[BLOCK_SIZE];
+	unsigned char buffer[BLOCK_SIZE];			//*commento fatto da Ghiotto Giovanni
 	unsigned int count;
 	int end;
 };
@@ -19,7 +17,7 @@ struct SHARED
 STARTUPINFO startup_window;
 PROCESS_INFORMATION child_process;
 
-int main(int argc, char* argv[]) //argomenti utili al lancio dell'eseguibile
+int main(int argc, char* argv[])
 {
 	struct SHARED *shared_data;
 	HANDLE shared_map, empty_semaphore, full_semaphore;
@@ -92,7 +90,7 @@ int main(int argc, char* argv[]) //argomenti utili al lancio dell'eseguibile
 
 	if (CreateProcess((LPWSTR)"Consumer.exe", (LPWSTR)command, NULL, NULL, TRUE, 0, NULL, NULL, &startup_window, &child_process) == 0)
 	{
-		printf("Errore nella creazione processo consumatore\r\n");
+		printf("Errore nella creazione processo consumatore\r\n");	//nel caso in cui ci siano errori nella creazione ritorna questa stringa
 		UnmapViewOfFile(shared_data);
 		CloseHandle(shared_map);
 		CloseHandle(empty_semaphore);
